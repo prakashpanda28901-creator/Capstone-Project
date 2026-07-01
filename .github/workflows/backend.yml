@@ -32,7 +32,7 @@ jobs:
           cd backend/process-uploaded-file
           zip -r lambda.zip .
 
-      - name: Update Lambda code
+      - name: Check Lambda Name
         run: |
           aws lambda update-function-code \
             --function-name ${{ env.LAMBDA_FUNCTION_NAME }} \
